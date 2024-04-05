@@ -1,3 +1,6 @@
+# Student Name & Surname: Melisa Çelik
+# Student ID: CEL0052
+
 from time import sleep
 
 class CaesarCipher:
@@ -70,6 +73,10 @@ def main():
     print("Decryption Completed!")
     print("Decrypted Text:", decryptedText)
 
+    sleep(0.5)
+    print("\nCaesar Cipher Encryption and Decryption Completed!")
+    sleep(0.5)
+
     sleep(1)
     print("\nPreparing for Brute Force Attack for the Ciphertext: " + ciphertext + "...")
     sleep(2)
@@ -81,7 +88,7 @@ def main():
     print("\nBrute Force Attack Results:")
     implementBruteForceAttack(ciphertext)
 
-    print("\nAttack Completed!")
+    print("\nBrute Force Attack Completed!")
 
     print("\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
 
