@@ -41,15 +41,29 @@ class VigenereCipher:
 def getValidKey():
     while True:
         try:
-            key = input("Enter the key (a word without spaces): ").upper()
-            if key.isalpha():
-                return key
+            choice = input("Do you want to enter a custom key? If no, the default key 'KEY' will used (yes/no): ").strip().lower()
+            if choice == 'yes':
+                key = input("Enter the key (a word without spaces): ").upper()
+                if key.isalpha():
+                    print("Setting the key...")
+                    sleep(1)
+                    print("Using custom key:", key)
+                    return key
+                else:
+                    print("\nInvalid key. Key should be a word without spaces.")
+                    print("Please try again:\n")
+            elif choice == 'no':
+                print("Setting the key...")
+                sleep(1)
+                print("Using default key: 'KEY'")
+                return "KEY"
             else:
-                print("\nInvalid key. Key should be a word without spaces.")
+                print("\nInvalid choice. Please enter 'yes' or 'no'.")
                 print("Please try again:\n")
         except ValueError:
             print("\nInvalid input.")
             print("Please enter a word without spaces:\n")
+
 
 def upperCase(text):
     return text.upper()
@@ -68,7 +82,7 @@ def main():
     cipher = VigenereCipher(key)
 
     plaintext = "TO BE OR NOT TO BE THAT IS THE QUESTION"
-    print("Plaintext:", plaintext)
+    print("\nPlaintext:", plaintext)
     print("\nPreparing the plaintext for encryption...\n")
     sleep(0.1)
     print("Converting to uppercase...")

@@ -44,6 +44,9 @@ def getValidShift():
                 print("\nInvalid shift value. Shift should be between 0 and 25.")
                 print("Please try again:\n")
             else:
+                print("Setting the shift value...")
+                sleep(1)
+                print("Using shift value:", shift)
                 return shift
         except ValueError:
             print("\nInvalid input.")
@@ -59,7 +62,7 @@ def main():
 
     ciphertext = "AOPZALYTPUHSPZUVTVYLPAOHZJLHZLKAVILPAZLEWPYLKHUKNVULAVT LAPAZTHRLYAOPZPZHSHALALYTPUHSPAZHZAPMMILYLMAVMSPMLPAYLZA PUWLHJLPMFVBOHKUAUHPSLKPAAVAOLILUJOPADVBSKILWBZOPUNBWAOLKHPZPLZAOPZPZHUEALYTPUHS"
 
-    plaintext = input("Enter the plaintext: ").upper()
+    plaintext = input("\nEnter the plaintext: ").upper()
 
     print("\nProcessing Encrypting with Caesar Cipher...")
     sleep(1)
