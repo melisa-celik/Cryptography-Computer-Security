@@ -41,7 +41,7 @@ class VigenereCipher:
 def getValidKey():
     while True:
         try:
-            choice = input("Do you want to enter a custom key? If no, the default key 'KEY' will used (yes/no): ").strip().lower()
+            choice = input("Do you want to enter a custom key? If no, the default key 'KEY' will be used (yes/no): ").strip().lower()
             if choice == 'yes':
                 key = input("Enter the key (a word without spaces): ").upper()
                 if key.isalpha():
